@@ -1147,3 +1147,106 @@ select {
     min-width: 36px;
   }
 }
+
+/* Menu lightness pass: keep the guildhall dark while making navigation and
+   player controls feel like a distinct, warmer working surface. */
+.quick-nav {
+  background:
+    linear-gradient(180deg, rgba(255, 244, 216, 0.17), rgba(223, 189, 125, 0.05) 12rem),
+    linear-gradient(180deg, #4a3926, #2d241a);
+  border-right-color: #a88957;
+  box-shadow: 16px 0 38px rgba(0, 0, 0, 0.38), inset -1px 0 rgba(255, 240, 202, 0.15);
+}
+
+.quick-nav-header,
+.quick-nav-hint {
+  border-color: rgba(225, 196, 141, 0.28);
+}
+
+.quick-nav-brand small,
+.quick-nav-hint,
+.quick-nav-link {
+  color: #e2d1af;
+}
+
+.quick-nav-close,
+.quick-nav-group {
+  background: rgba(255, 247, 226, 0.09);
+  border-color: rgba(225, 196, 141, 0.34);
+}
+
+.quick-nav-close {
+  color: #fff3d8;
+}
+
+.quick-nav-group-toggle {
+  background: rgba(255, 247, 226, 0.11);
+  color: #fff4dc;
+}
+
+.quick-nav-group-toggle:hover:not(:disabled),
+.quick-nav-group-toggle:focus-visible:not(:disabled),
+.quick-nav-close:hover:not(:disabled),
+.quick-nav-close:focus-visible:not(:disabled) {
+  background: rgba(255, 224, 157, 0.2);
+}
+
+.quick-nav-submenu {
+  background: rgba(31, 23, 15, 0.2);
+  border-color: rgba(225, 196, 141, 0.25);
+}
+
+.quick-nav-link:hover,
+.quick-nav-link:focus-visible {
+  background: rgba(255, 248, 225, 0.12);
+  color: #fff8e7;
+}
+
+.quick-nav-link[aria-current="location"] {
+  background: rgba(255, 220, 143, 0.22);
+  border-left-color: #ffe0a0;
+  color: #fff0c7;
+}
+
+.command-bar,
+.notification-center,
+.qol-toolbar,
+.mobile-action-tray,
+.shortcut-overlay > div {
+  border-color: rgba(222, 187, 120, 0.52);
+}
+
+.command-bar {
+  background: linear-gradient(135deg, #5a442b, #3b2e20);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26), inset 0 1px rgba(255, 242, 212, 0.16);
+}
+
+.command-resources span,
+.secondary-action,
+.text-action,
+.qol-toolbar,
+.qol-panel-controls button,
+.panel-top-link {
+  background: rgba(255, 249, 230, 0.11);
+  border-color: rgba(224, 196, 143, 0.34);
+}
+
+.notification-center {
+  background: linear-gradient(180deg, #4e3c27, #35291d);
+}
+
+.notification-center li {
+  border-color: rgba(225, 196, 141, 0.25);
+}
+
+select {
+  background: #3c2e20;
+  border-color: rgba(224, 196, 143, 0.5);
+}
+
+@media (max-width: 700px) {
+  .mobile-action-tray {
+    background: linear-gradient(180deg, #4d3a27, #35281d);
+    border-color: rgba(224, 196, 143, 0.5);
+  }
+}
