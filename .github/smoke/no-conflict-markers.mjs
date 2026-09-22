@@ -4,7 +4,11 @@ import { extname, join } from 'node:path';
 const ROOT = process.cwd();
 const SKIP = new Set(['.git', 'node_modules', 'dist', 'build', 'coverage']);
 const TEXT_EXTS = new Set(['.js', '.mjs', '.cjs', '.json', '.html', '.css', '.md', '.yml', '.yaml', '.txt']);
-const MARKERS = ['<<<<<<< ', '=======\n', '>>>>>>> '];
+const MARKERS = [
+  '<'.repeat(7) + ' ',
+  '='.repeat(7) + '\n',
+  '>'.repeat(7) + ' ',
+];
 const failures = [];
 
 async function walk(dir) {
