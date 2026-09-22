@@ -20,6 +20,8 @@ jobs:
           cache: npm
       - name: Install from lockfile
         run: npm ci
+      - name: Run repository integrity smoke
+        run: node .github/smoke/run-integrity.mjs
       - name: Run playable-loop smoke
         run: npm run smoke:all
       - name: Generate read-only progression report
